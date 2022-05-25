@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   $('#tweet-text').on('keyup', function() {
     let characterCount = 140 - (this.value.length); // number of input characters 
-    console.log(numberOfCharactersLeft.html());
+    // console.log(numberOfCharactersLeft.html());
     numberOfCharactersLeft.html(characterCount);
     if (numberOfCharactersLeft.html() < 0) {
       $('.counter').css( "color", "red" )

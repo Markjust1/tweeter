@@ -5,11 +5,15 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f07c00;
+  background-color: #f06800;
   background-image: url("https://www.transparenttextures.com/patterns/honey-im-subtle.png");
   z-index: 1;
 }
 
 .profile {
   margin-top: 150px;
+}
+
+.account-name {
+  color: #FFFFFF;
 }

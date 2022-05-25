@@ -1,6 +1,7 @@
 .new-tweet {
   max-width: 70%;
   border: 1px #545149;
+
   margin-bottom: 1.5em;
   margin: auto;
 }
@@ -40,6 +41,7 @@ button {
   display: flex;
   align-items: flex-start;
   font-size: 90%;
+  margin-top: 15px;
 }
 
 .tweet-container {
@@ -68,10 +70,36 @@ button {
   font-size: 90%;
 }
 
+.tweet-title {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.title {
+  margin-left: 30px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .avatar {
-  text-align: left;
   margin-left: 0.7em;
-  box-shadow: none;
+}
+
+.name {
+  padding: 10px;
+}
+
+.handle {
+  color: rgba(134, 134, 219, 0.77);
+  display: flex;
+  align-self: center;
+  margin-right: 0.7em;
+  margin-right: 0.7em;
+  text-align: right; 
 }
 
 .icon-list {

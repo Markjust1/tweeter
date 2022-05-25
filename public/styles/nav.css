@@ -1,5 +1,6 @@
 nav {
-  position: relative;
+  position: fixed;
+  width: 100%;
   display: flex;
   background-color: #4056A1;
   font-family: bungee;
@@ -8,7 +9,7 @@ nav {
   padding: 0 1.5em;
   justify-content: space-between;
   align-items: flex-end;
-  z-index: 9;
+  z-index: 5;
  }
 
  .tweeter {

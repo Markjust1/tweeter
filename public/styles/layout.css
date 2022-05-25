@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
@@ -15,6 +16,7 @@ html {
  */
 
 body {
+  font-family: 'Source Sans Pro';
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -23,3 +25,10 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+   max-width: 90%;
+   margin: auto;
+   text-align: center;
+   background-color: #f4f1ec;
+ }

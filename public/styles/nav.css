@@ -1,0 +1,25 @@
+nav {
+  position: relative;
+  display: flex;
+  background-color: #4056A1;
+  font-family: bungee;
+  color: #FFFFFF;
+  height: 120px;
+  padding: 0 1.5em;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 9;
+ }
+
+ .tweeter {
+  margin-bottom: .8em;
+ }
+
+ .newTweet {
+   font-family: source sans pro;
+   margin-bottom: 1em;
+ }
+ .newTweet .fa-solid {
+   display: block;
+   margin-left: 87px;
+ }

@@ -117,7 +117,7 @@ button {
   color: rgb(255, 174, 0);
 }
 
-.tweets:hover .tweet-container {
+.tweets .tweet-container:hover {
   box-shadow: 8px 8px rgba(134, 134, 219, 0.77);
 }
 

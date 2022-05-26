@@ -4,7 +4,6 @@
 // }
 
 $(document).ready(function() {
-  console.log('document is loaded');
   let numberOfCharactersLeft = $('.counter'); // targeting number of characters left
 
   $('#tweet-text').on('keyup', function() {

@@ -7,7 +7,7 @@ header {
   flex-direction: column;
   background-color: #f06800;
   background-image: url("https://www.transparenttextures.com/patterns/honey-im-subtle.png");
-  z-index: 1;
+  z-index: 2;
 }
 
 .profile {
@@ -16,4 +16,53 @@ header {
 
 .account-name {
   color: #FFFFFF;
+}
+
+
+@keyframes appear {
+  from {display: none;
+      opacity: 0;}
+  to {display: inline;
+      opacity: 10;}
+}
+
+.error {
+  display: none;
+  border: 4px solid;
+  border-radius: 4px;
+	margin: 10px;
+	padding: 15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	width: 100%;
+  height: 60px;
+  text-shadow: #FFBABA;
+  color: #f1131e;
+	background-color: #FFBABA;
+	background-image: url('https://i.imgur.com/GnyDvKN.png');
+  animation-name: appear;
+  animation-duration: 2s;
+  text-align: center;
+  z-index: 1;
+}
+
+
+.error2 {
+  display: none;
+  border: 4px solid;
+  border-radius: 4px;
+	margin: 10px;
+	padding: 15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	width: 100%;
+  height: 60px;
+  text-shadow: #FFBABA;
+  color: #f1131e;
+	background-color: #FFBABA;
+	background-image: url('https://i.imgur.com/GnyDvKN.png');
+  animation-name: appear;
+  animation-duration: 2s;
+  text-align: center;
+  z-index: 1;
 }

@@ -11,6 +11,9 @@
 ///////////////  APPENDING FUNCTION  //////////////////
 
 const createTweetElement = function(item) {
+  const safeInput = $('<div class="user-text">').text(item.content.text);
+  //console.log(item.content.text);
+  safeInput.addClass("tweet-text");
   const $tweet = $(`
     <article class="tweet-container">
       <div class="tweet-title">
@@ -19,18 +22,23 @@ const createTweetElement = function(item) {
           <p class="name">${item.user.name}</p>
         </div>
         <div class="handle">${item.user.handle}</div>
-      </div>
-        <p class="tweet-text">${item.content.text}</p>
+      </div>`)
+      const footer = $(`
       <div class="tweet-footer">
-        <div>${timeago.format(item.created_at)}</div>
-        <ul class="icon-list">
-          <li><i class="fa-solid fa-flag"></i></li> 
-          <li><i class="fa-solid fa-retweet"></i></li> 
-          <li><i class="fa-solid fa-heart"></i></li>
-        </ul>
-      </div>
-    </article>`);
-  $('.tweets').prepend($tweet);
+      <div>${timeago.format(item.created_at)}</div>
+      <ul class="icon-list">
+        <li><i class="fa-solid fa-flag"></i></li> 
+        <li><i class="fa-solid fa-retweet"></i></li> 
+        <li><i class="fa-solid fa-heart"></i></li>
+      </ul>
+    </div>
+    </article>
+      `);
+      
+    $tweet.append(safeInput);
+    $tweet.append(footer);
+    $('.tweets').prepend($tweet);
+  
 }
 
 //////////////   LOOPING THROUGH ITEMS IN DATABASE ///////////////////
@@ -45,12 +53,10 @@ const renderTweets = (data) => {
 $(() => {
   $('#submit-form').on('submit', (event) => {
     event.preventDefault();
-    const userMessage = $('#tweet-text').val();
-    if (userMessage.length === 0 || userMessage === null) {
-      alert('The input form is empty');
-      return;
-    } else if (userMessage.length > 140) {
-      alert('You have exceeded 140 characters');
+    let userMessage = $('#tweet-text').val();
+    error();
+    if (userMessage.length > 140) {
+      error2();
       return;
     }
     const str = $('#submit-form').serialize();
@@ -60,17 +66,20 @@ $(() => {
       data: str,
       success: () => {
         loadTweets(true);
+        if (userMessage.length < 140) {
+          userMessage = $('#tweet-text').val("");
+        }
+        $('.counter').val('140');
       }
     })
-    console.log('post-submission message')
   })
 
   const loadTweets = (getLast) => {
     $.get('/tweets')
       .then(posts => {
         if (getLast) {
-          const lastTweet = posts[posts.length -1];
-          renderTweets([lastTweet]);
+            const lastTweet = posts[posts.length -1];
+            renderTweets([lastTweet]);
         } else {
           renderTweets(posts);
         }
@@ -78,3 +87,30 @@ $(() => {
   };
   loadTweets();
 });
+
+
+const error = () => {
+  let userMessage = $('#tweet-text').val();
+  if (userMessage.length === 0 || userMessage === null) {
+    $('.error').val('The field is empty');
+    $('.error').css( "display", "inline-block" );
+    document.addEventListener('keydown', () => {
+      $('.error').css( "display", "none" );
+    })
+    return;
+  }
+  return;
+}
+
+const error2 = () => {
+  let userMessage = $('#tweet-text').val();
+  if (userMessage.length > 140) {
+    $('.error2').val('You have exceeded 140 characters');
+    $('.error2').css( "display", "inline-block" );
+    document.addEventListener('keydown', () => {
+      $('.error2').css( "display", "none" );
+    })
+    //$('#tweet-text').val('');
+    return;
+  }
+}

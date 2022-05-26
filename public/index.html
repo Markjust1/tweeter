@@ -1,78 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    <script src="https://kit.fontawesome.com/351cb6f8b1.js" crossorigin="anonymous"></script>
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- EXTERNAL FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+  <script src="https://kit.fontawesome.com/351cb6f8b1.js" crossorigin="anonymous"></script>
 
+  <!-- EXTERNAL FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    rel="stylesheet">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="./scripts/client.js"></script>
-    
-    <!-- META TAGS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  
-  <body>
-    
-    <!-- Top nav bar (fixed) -->
-    <nav>
-        <div class="tweeter">tweeter</div>
-        <div class="newTweet"><strong>Write</strong> a new tweet <i class="fa-solid fa-angles-down fa-bounce" style="color: red; --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; "></i></div>
-      </nav>
-      
-      <!-- Header -->
-      <header>
-        <div>
-          <img src="./images/profile-hex.png" class="profile">
+  <!-- App JS -->
+  <script type="text/javascript" src="./scripts/client.js"></script>
+
+  <!-- META TAGS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <div class="tweeter">tweeter</div>
+    <div class="newTweet"><strong>Write</strong> a new tweet <i class="fa-solid fa-angles-down fa-bounce"
+        style="color: red; --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; "></i>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div>
+      <img src="./images/profile-hex.png" class="profile">
+    </div>
+    <div>
+      <h2 class="account-name">Amy Mansell</h2><br>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+
+    <section class="new-tweet">
+      <form id='submit-form' action="/tweets/" method="POST">
+        <div class="error">Input field is empty</div>
+        <div class="error2">You have exceeded 140 characters</div>
+        <label for="tweet-text" id="label">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div class="bottom">
+          <button id="submit-button" type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
-        <div>
-          <h2 class="account-name">Amy Mansell</h2><br>
-        </div>
-      </header>
-      
-      <!-- Page-specific (main) content here -->
-      <main class="container">
+      </form>
+      <!-- TWEETS -->
+      <section class="tweets">
+        <!-- CONTENT GOES HERE -->
+      </section>
+    </section>
+  </main>
+  <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+</body>
 
-        <section class="new-tweet">
-          <!-- <h2>Compose Tweet</h2> -->
-          <form id='submit-form' action="/tweets/" method="POST">
-            <div class="error">Input field is empty</div>
-            <div class="error2">You have exceeded 140 characters</div>
-            <label for="tweet-text" id="label">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
-            <div class="bottom">
-              <button id="submit-button" type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
-            </div>
-          </form>
-
-
- <!-- TWEETS -->
-          <section class="tweets">
-            <!-- CONTENT GOES HERE -->
-          </section>
-        </section>
-      </main>
-      <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
-  </body>
 </html>

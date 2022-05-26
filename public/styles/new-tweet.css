@@ -1,3 +1,5 @@
+/* NEW TWEET SECTION */
+
 .new-tweet {
   max-width: 70%;
   border: 1px #545149;
@@ -128,8 +130,10 @@ button {
   box-shadow: 8px 8px rgba(134, 134, 219, 0.77);
 }
 
-@media screen and (max-width:400px) {
-  .tweet-container {
-    background-color: aquamarine;
-  }
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Write Tablet only CSS here */
 }

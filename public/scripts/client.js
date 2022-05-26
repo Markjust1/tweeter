@@ -30,7 +30,7 @@ const createTweetElement = function(item) {
         </ul>
       </div>
     </article>`);
-  $('.tweets').append($tweet);
+  $('.tweets').prepend($tweet);
 }
 
 //////////////   LOOPING THROUGH ITEMS IN DATABASE ///////////////////

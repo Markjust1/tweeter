@@ -102,6 +102,7 @@ button {
   text-align: right; 
 }
 
+
 .icon-list {
   list-style-type: none;
   display: flex;
@@ -120,7 +121,3 @@ button {
 .tweets .tweet-container:hover {
   box-shadow: 8px 8px rgba(134, 134, 219, 0.77);
 }
-
-/* .tweet-container :hover {
-  box-shadow: none;
-} */

@@ -59,19 +59,22 @@ $(() => {
       method: 'POST',
       data: str,
       success: () => {
-        loadTweets();
+        loadTweets(true);
       }
     })
     console.log('post-submission message')
   })
 
-  const loadTweets = () => {
-    $.get('/tweets', )
+  const loadTweets = (getLast) => {
+    $.get('/tweets')
       .then(posts => {
-        renderTweets(posts);
+        if (getLast) {
+          const lastTweet = posts[posts.length -1];
+          renderTweets([lastTweet]);
+        } else {
+          renderTweets(posts);
+        }
       })
   };
-
-
   loadTweets();
 });

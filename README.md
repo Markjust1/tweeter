@@ -31,12 +31,17 @@ Here's how app looks like on a mobile device:
 ENJOY!
 
 ## Dependencies
-
+  ***
   -body-parser
+  ***
   -chance
+  ***
   -express
+  ***
   -md5
+  ***
   -timeago.js
+  ***
 
 
 ## Getting Started

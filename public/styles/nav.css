@@ -7,7 +7,8 @@ nav {
   background-color: #4056A1;
   font-family: bungee;
   color: #FFFFFF;
-  height: 120px;
+  height: 12vw;
+  max-height: 130px;
   padding: 0 1.5em;
   justify-content: space-between;
   align-items: flex-end;
@@ -15,7 +16,9 @@ nav {
  }
 
  .tweeter {
-  margin-bottom: .8em;
+  font-size: 3vw;
+  margin-bottom: 2vw;
+  padding-bottom: 0.5vh;
  }
 
  .newTweet {
@@ -27,7 +30,7 @@ nav {
    margin-left: 87px;
  }
 
- @media only screen and (min-width: 320px) and (max-width: 420px) {
+ /* @media only screen and (min-width: 320px) and (max-width: 420px) {
   nav {
     height: 60px;
     width: 100vw;
@@ -40,8 +43,27 @@ nav {
     size-adjust: 150%;
     margin: auto;
    }
+} */
+
+/* desktop */
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    align-content: center;
+  }
+
+  .newTweet {
+    font-size: 3vh;
+    margin-bottom: 25px;
+  }
+
+  .tweeter {
+    font-size: 5vh;
+  }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Write Tablet only CSS here */
+@media only screen and (mix-width: 420px) {
+  .newTweet {
+    display: none;
+  }
 }

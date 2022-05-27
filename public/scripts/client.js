@@ -49,6 +49,7 @@ const renderTweets = (data) => {
 ////////////   MESSAGE SUBMISSION //////////////
 
 $(() => {
+
   $('#submit-form').on('submit', (event) => {
     event.preventDefault();
     let userMessage = $('#tweet-text').val();
@@ -117,3 +118,21 @@ const error2 = () => {
     return;
   }
 };
+
+// stretch 
+
+// const showForm = () => {
+//   let isTrue = true;
+//   if (isTrue === false) {
+//     $('.newTweet').on('click', () => {
+//       $('#submit-form').css('display', 'flex');
+//       isTrue = true;
+//       return;
+//     });
+//   } else {$('.newTweet').on('click', () => {
+//     $('#submit-form').css('display', 'none');
+//     isTrue = false;
+//     return;
+//     });
+//   }
+// }

@@ -2,17 +2,45 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Final Product
 
-## Getting Started
+***
+Here we can see the Main page:
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+!["Main page"](./public/screenshots/main-page.png)
+***
+Here we have the main page on the desktop:
+
+!["Creating a tweet"](./public/screenshots/write.png)
+***
+
+Want to write something and show the world? (Just type in something into the form):
+
+!["Submitted tweet"](./public/screenshots/submit.png)
+***
+Here you can see submitted tweet:
+
+!["Tablet view"](./public/screenshots/tablet.png)
+***
+Here's how app looks like on a tablet:
+
+!["Mobile view"](./public/screenshots/mobile.png)
+***
+Here's how app looks like on a mobile device:
+
+ENJOY!
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+  -body-parser
+  -chance
+  -express
+  -md5
+  -timeago.js
+
+
+## Getting Started
+
+- Install all dependencies (using the `npm install` command).
+- Run the server using the `npm run local` command.
+- Go to 'localhost:8080' and enjoy the app!

@@ -54,7 +54,7 @@ nav {
 
   .newTweet {
     font-size: 3vh;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
   }
 
   .tweeter {
@@ -62,8 +62,57 @@ nav {
   }
 }
 
-@media only screen and (mix-width: 420px) {
+/* tablets */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    background-color: #4057a100;
+  }
+
+  .newTweet {
+    font-size: 3vh;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    min-width: 50px;
+  }
+  .tweeter {
+    font-size: 5vh;
+  }
+}
+
+
+/* mobile */
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+  nav {
+    background-color: #4057a100;
+  }
   .newTweet {
     display: none;
+  }
+
+  .tweeter {
+    font-size: 6vw;
+    margin-top: 3vw;
+  }
+  .newTweet {
+    display: none
+  }
+
+}
+
+@media only screen and (max-width: 279px) {
+  nav {
+    background-color: #4057a100;
+    display: flex;
+  }
+  .newTweet {
+    display: none
+  }
+
+  .tweeter {
+    margin: 0;
+    padding-top: 10px;
+    margin-left: 0;
+    font-size: 2vh;
   }
 }

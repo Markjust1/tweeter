@@ -1,7 +1,7 @@
 /* NEW TWEET SECTION */
 
 .new-tweet {
-  max-width: 70%;
+  max-width: 90%;
   border: 1px #545149;
 
   margin-bottom: 1.5em;
@@ -152,3 +152,46 @@ button {
     font-size: 3vh;
   }
 }
+
+/* mobile */
+
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+
+  .tweet-title {
+    height: 8vh;
+  }
+
+  #label {
+    font-size: 3vh;
+  }
+  .new-tweet {
+    max-width: 95%;
+  }
+
+  .handle {
+    font-size: 17px;
+    margin-bottom: 1em;
+    margin-right: 25px;
+    height: 2vh;
+  }
+
+  .title {
+    margin-bottom: 1em;
+    width: 10px;
+    
+  }
+  img{
+    height: 30px;
+    margin-right: 15px;
+  }
+  .name {
+    font-size: 17px;
+    margin-right: 15px;
+  }
+
+  .tweet-text {
+    font-size: 20px;
+  }
+}
+
+

@@ -4,7 +4,7 @@ nav {
   position: fixed;
   width: 100vw;
   display: flex;
-  background-color: #4056A1;
+  background-color: #9d0590;
   font-family: bungee;
   color: #FFFFFF;
   height: 12vw;
@@ -13,9 +13,11 @@ nav {
   justify-content: space-between;
   align-items: flex-end;
   z-index: 5;
+  background-image: url("https://www.transparenttextures.com/patterns/honey-im-subtle.png");
  }
 
  .tweeter {
+  text-shadow: 3px 3px 10px #321062;
   font-size: 3vw;
   margin-bottom: 2vw;
   padding-bottom: 0.5vh;
@@ -24,6 +26,7 @@ nav {
  .newTweet {
    font-family: source sans pro;
    margin-bottom: 1em;
+   text-shadow: 3px 3px 10px #321062;
  }
  .newTweet .fa-solid {
    display: block;
@@ -67,6 +70,7 @@ nav {
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   nav {
     background-color: #4057a100;
+    background-image: none;
   }
 
   .newTweet {
@@ -85,6 +89,7 @@ nav {
 @media only screen and (min-width: 280px) and (max-width: 767px) {
   nav {
     background-color: #4057a100;
+    background-image: none;
   }
   .newTweet {
     display: none;
@@ -103,6 +108,7 @@ nav {
 @media only screen and (max-width: 279px) {
   nav {
     background-color: #4057a100;
+    background-image: none;
     display: flex;
   }
   .newTweet {

@@ -7,8 +7,9 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ff6a00;
-  background-image: url("https://www.transparenttextures.com/patterns/honey-im-subtle.png");
+  background-color: #ffc260;
+  background-image: url("https://www.transparenttextures.com/patterns/pineapple-cut.png");
+  box-shadow: 0 0 8px 8px #f4f1ec inset;
   z-index: 2;
 }
 
@@ -18,6 +19,7 @@ header {
 
 .account-name {
   color: #FFFFFF;
+  text-shadow: 3px 3px 10px #c56200;
 }
 
 
@@ -98,15 +100,17 @@ header {
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   header {
-    height: 45vw;
+    height: 38vw;
   }
 
   .account-name {
-    font-size: 2em;
+    font-size: 1.5em;
+    margin-top: 15px;
   }
 
   .profile {
-    margin-top: 70px;
+    margin-top: 8vh;
+    margin-bottom: 3px;
   }
 }
 

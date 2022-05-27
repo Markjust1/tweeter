@@ -14,9 +14,9 @@
   margin-bottom: 1.5em;
 }
 
-button {
+#submit-button {
   font-family: bungee;
-  background-color: #4056A1;
+  background-color: #5f078e;
   color: #FFFFFF;
   border-radius: 1px;
   border: 1px #545149;
@@ -150,6 +150,30 @@ button {
 
   #label {
     font-size: 3vh;
+  }
+
+  #submit-button {
+    width: 9vw;
+    height: 2.5vw;
+    font-size: 2vw;
+  }
+
+  .counter {
+    font-size: 2vw;
+  }
+}
+
+/* tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #label {
+    font-size: 3.5vh;
+  }
+
+  #submit-button {
+    width: 16vw;
+    height: 6vw;
+    font-size: 4vw;
   }
 }
 
